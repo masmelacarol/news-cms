@@ -1,0 +1,86 @@
+<form [formGroup]="form" class="register" (ngSubmit)="register()">
+  <section class="register__container">
+    <div class="register__items">
+      <div class="register__item">
+        <label>Nombre: </label>
+        <input
+          matInput
+          type="text"
+          placeholder="Escribe tu nombre"
+          formControlName="name"
+          [class.is-invalid]="
+            this.nameField!.touched && this.nameField!.invalid
+          "
+        />
+      </div>
+      <div class="register__item">
+        <label>Apellido:</label>
+        <input
+          placeholder="Escribe tu apellido"
+          formControlName="family_name"
+          matInput
+          type="text"
+          [class.is-invalid]="
+            this.familyNameField!.touched && this.familyNameField!.invalid
+          "
+        />
+      </div>
+      <div class="register__item">
+        <label>Correo electrónico: </label>
+        <input
+          placeholder="Escribe tu correo electrónico"
+          formControlName="email"
+          matInput
+          type="email"
+          [class.is-invalid]="
+            this.emailField!.touched && this.emailField!.invalid
+          "
+        />
+      </div>
+    </div>
+    <div class="register__items">
+      <div class="register__item">
+        <label>Teléfono: </label>
+        <input
+          placeholder="Escribe tu número de teléfono"
+          formControlName="phone"
+          matInput
+          type="number"
+          [class.is-invalid]="
+            this.phoneField!.touched && this.phoneField!.invalid
+          "
+        />
+      </div>
+      <div class="register__item" *ngIf="programList$ | async as programList">
+        <label>Programa de interés: </label>
+        <mat-select
+          formControlName="program"
+          placeholder="Seleccione una opción"
+        >
+          <mat-option
+            *ngFor="let program of programList.programs"
+            [value]="program.id"
+            >{{ program.name }}</mat-option
+          >
+        </mat-select>
+      </div>
+      <div class="register__item">
+        <label>Comentarios: </label>
+        <textarea
+          placeholder="Escribe tus comentarios"
+          formControlName="comment"
+          matInput
+          cols="50"
+        ></textarea>
+      </div>
+    </div>
+  </section>
+  <button
+    class="button-register"
+    [disabled]="form.invalid"
+    mat-button
+    color="primary"
+  >
+    Registro
+  </button>
+</form>

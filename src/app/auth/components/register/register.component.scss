@@ -1,0 +1,77 @@
+.register {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    label {
+      display: block;
+    }
+
+    input,
+    textarea,
+    mat-select {
+      border: none;
+      box-shadow: 1px 1px 10px 0 #bababa;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    input,
+    mat-select {
+      padding: 0 1rem;
+      height: 2.5rem;
+      width: 100%;
+
+      &.is-valid {
+        border: 1px solid green;
+      }
+
+      &.is-invalid {
+        border: 1px solid red;
+      }
+    }
+
+    ::ng-deep {
+      .mat-select-trigger {
+        height: 100%;
+      }
+
+      .mat-select-placeholder,
+      .mat-select-value-text {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+    }
+
+    textarea {
+      max-width: 800px !important;
+      padding: 1rem;
+    }
+  }
+
+  .button-register {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: brown;
+    color: #fff;
+    border-radius: 10px;
+
+  }
+
+  button:disabled {
+    background: #dddddd;
+    cursor: pointer;
+  }
+
+}
