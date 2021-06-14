@@ -1,0 +1,19 @@
+<nav class="menu">
+  <ul class="menu__items">
+    <mat-divider></mat-divider>
+    <li class="menu__item">
+      <a [routerLink]="['/home']" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        <span>Inicio</span>
+      </a>
+    </li>
+    <mat-divider></mat-divider>
+    <li class="menu__item">
+      <a [routerLink]="['/auth/register']" routerLinkActive="active">
+        <mat-icon>person_add_alt</mat-icon>
+        <span>Registro</span>
+      </a>
+    </li>
+    <mat-divider></mat-divider>
+  </ul>
+</nav>

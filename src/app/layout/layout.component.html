@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <section class="button-menu">
+    <button mat-icon-button aria-label="menu" (click)="toggleClick()">
+      <mat-icon *ngIf="!sideNav.opened">menu</mat-icon>
+      <mat-icon *ngIf="sideNav.opened">close</mat-icon>
+    </button>
+  </section>
+  <app-header></app-header>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sideNav="matSidenav" mode="over">
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<app-footer></app-footer>

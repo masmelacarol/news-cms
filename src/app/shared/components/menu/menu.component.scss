@@ -1,0 +1,17 @@
+.menu {
+
+  &__items,
+  &__item a {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__items {
+    flex-direction: column;
+  }
+
+  &__item a {
+    align-items: center;
+    color: #fff;
+  }
+}

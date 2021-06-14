@@ -1,0 +1,30 @@
+.header {
+  display: block;
+  width: calc(100vw - 4rem);
+  height: 4rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-main);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    figure {
+      width: 30px;
+      height: 30px;
+      margin: auto;
+
+      .icon_logo {
+        width: 100%;
+      }
+    }
+  }
+}
