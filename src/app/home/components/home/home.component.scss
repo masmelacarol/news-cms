@@ -1,0 +1,38 @@
+.home {
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1rem;
+
+    &--items {
+      margin: auto;
+      cursor: pointer;
+
+      .item {
+
+        h6 {
+          max-width: 18rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      img {
+        filter: grayscale(1);
+        margin: 1rem auto;
+        border-radius: 10px;
+        transition: all 0.5s;
+        width: 100%;
+      }
+
+      &:hover {
+        img {
+          filter: grayscale(0);
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+
+}

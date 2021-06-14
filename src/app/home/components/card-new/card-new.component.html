@@ -1,0 +1,16 @@
+<section class="cardNew" *ngIf="cardNew">
+  <figure>
+    <img [src]="images[isNumber(cardNew.id)]" />
+  </figure>
+  <div class="cardNew__content">
+    <div class="cardNew__header">
+      <h6>{{ cardNew.title }}:</h6>
+    </div>
+    <div class="cardNew__body">
+      <p>{{ cardNew.body }}</p>
+    </div>
+  </div>
+  <div class="cardNew__footer">
+    <a mat-button routerLink="/home">Volver</a>
+  </div>
+</section>

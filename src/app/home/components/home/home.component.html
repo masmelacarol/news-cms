@@ -1,0 +1,13 @@
+<section class="home" *ngIf="news$ | async as news">
+  <h4>Noticias recientes:</h4>
+  <section class="home__news">
+    <div class="home__news--items" *ngFor="let item of news.news; index as i">
+      <a class="item" routerLink="/home/news/{{ item.id }}">
+        <h6>
+          {{ item.title }}
+        </h6>
+        <img [src]="images[i]" [alt]="item.title" />
+      </a>
+    </div>
+  </section>
+</section>

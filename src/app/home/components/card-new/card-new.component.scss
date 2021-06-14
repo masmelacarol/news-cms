@@ -1,0 +1,73 @@
+.cardNew {
+  box-shadow: 1px 1px 10px 0 #bababa;
+  border-radius: 10px;
+  width: 65vw;
+  margin: auto;
+
+  figure {
+    height: 15rem;
+
+    img {
+      border-radius: 10px 10px 0 0;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(0.8px);
+    }
+  }
+
+  &__content {
+    padding: 4rem;
+  }
+
+  &__header {
+    h6 {
+      font-size: 1.5rem;
+    }
+
+  }
+
+  &__body {
+    margin: 1rem;
+
+    p {
+      font-size: 1rem;
+    }
+
+
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: auto;
+
+    &__content {
+      padding: 1rem;
+    }
+
+    figure {
+      height: 8rem;
+    }
+
+    &__header {
+      h6 {
+        font-size: medium !important;
+      }
+    }
+
+    &__body {
+
+
+      p {
+        font-size: 0.8rem;
+      }
+
+
+    }
+
+  }
+}
